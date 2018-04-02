@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "111a200f-5946-488b-8f62-68c35c3d4fe4",
+            "Value": {
+                "id": "aa6c841f-5126-433d-9e26-526a3d7cd3b9",
+                "resourcePath": "objects\\player\\player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "129baaf8-54f6-4448-80df-dfdd54285f2b",
             "Value": {
                 "id": "0b3d0067-ca6e-4a13-ad04-23f791cc07ad",
@@ -76,6 +84,14 @@
                 "id": "78cd748b-ee00-47e4-98dc-fdc419c7a243",
                 "resourcePath": "views\\1aaa202a-020d-4c8c-9613-a4f884d9aeda.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2359aba3-cff3-43db-b318-3e19ea2a4811",
+            "Value": {
+                "id": "a1533122-2dcb-461b-a5bf-83ec56085155",
+                "resourcePath": "objects\\obj_ladder\\obj_ladder.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -159,14 +175,6 @@
             }
         },
         {
-            "Key": "67b952da-60ae-4e6c-99b0-12f65e85cd8d",
-            "Value": {
-                "id": "b1ef6c7d-7978-428c-a5e5-4f04d174ad31",
-                "resourcePath": "objects\\brick\\brick.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "72e723f0-8b48-4437-816b-6a29cda66fa1",
             "Value": {
                 "id": "9dfbbb5a-94fe-4c9f-a9a3-f4a8d8e8dc22",
@@ -183,11 +191,11 @@
             }
         },
         {
-            "Key": "84fff36d-a03b-4a69-8b44-10ef771ab688",
+            "Key": "8c0a13a9-c07b-48e1-be50-3a6f41f281c7",
             "Value": {
-                "id": "d02ba902-e66f-4b58-a90d-d3ee2564517c",
-                "resourcePath": "sprites\\block_sprite\\block_sprite.yy",
-                "resourceType": "GMSprite"
+                "id": "43a78011-e604-498a-9cbe-ffa50fef1af5",
+                "resourcePath": "objects\\obj_skeleton\\obj_skeleton.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -211,14 +219,6 @@
             "Value": {
                 "id": "901abab9-bab1-4f1e-a603-63ad07650c67",
                 "resourcePath": "objects\\wallClass\\wallClass.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "a0ada832-e216-47f4-b10d-d3ad20f3f9bc",
-            "Value": {
-                "id": "de8bab19-40f8-4ac5-be4c-e3745199bf5f",
-                "resourcePath": "objects\\brickWithItem\\brickWithItem.yy",
                 "resourceType": "GMObject"
             }
         },
