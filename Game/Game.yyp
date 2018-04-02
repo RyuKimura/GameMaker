@@ -263,6 +263,7 @@
             }
         },
         {
+<<<<<<< HEAD
             "Key": "cf6b184d-d003-4eca-8dd2-d62f59c8ecb5",
             "Value": {
                 "id": "ef721946-ccc2-4d34-a520-a8ef523511fa",
@@ -275,6 +276,12 @@
             "Value": {
                 "id": "8afc5b19-c12a-44f8-8e54-1a72aebb5285",
                 "resourcePath": "sprites\\tiletset1_spr\\tiletset1_spr.yy",
+=======
+            "Key": "e8af635f-80c1-4951-9bfe-2ab2f2fe0e22",
+            "Value": {
+                "id": "aa548500-4595-4f66-94cf-7043f1db9127",
+                "resourcePath": "sprites\\skeleton_sprite\\skeleton_sprite.yy",
+>>>>>>> master
                 "resourceType": "GMSprite"
             }
         },
