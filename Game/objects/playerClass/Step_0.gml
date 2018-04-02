@@ -6,3 +6,4 @@ move = key_right + key_left;
 hspd = move * spd;
 
 x += hspd;
+
