@@ -3,3 +3,4 @@
 
 draw_sprite(sprite1,0,room_width/2,room_height/2);
 draw_text(32,32,"Neat");
+draw_text(32,64,"Realod");
