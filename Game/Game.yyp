@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "1883fc8c-e605-4ef3-8c57-bf8094721991",
+            "Value": {
+                "id": "1485cb80-08d4-40c6-ba31-5304f014fd4a",
+                "resourcePath": "objects\\brickWIthItem\\brickWIthItem.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1aaa202a-020d-4c8c-9613-a4f884d9aeda",
             "Value": {
                 "id": "78cd748b-ee00-47e4-98dc-fdc419c7a243",
@@ -252,14 +260,6 @@
                 "id": "4a5dacac-93d1-4051-aaee-9a8e839857da",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
-            }
-        },
-        {
-            "Key": "be4f0ddd-3746-4692-9169-668c0da1a20a",
-            "Value": {
-                "id": "efb6dca2-daa8-4526-a664-1ac24a9b9aab",
-                "resourcePath": "objects\\brick1\\brick1.yy",
-                "resourceType": "GMObject"
             }
         },
         {

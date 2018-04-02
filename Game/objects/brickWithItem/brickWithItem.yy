@@ -1,19 +1,10 @@
 {
-    "id": "a0ada832-e216-47f4-b10d-d3ad20f3f9bc",
+    "id": "1883fc8c-e605-4ef3-8c57-bf8094721991",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "brickWithItem",
+    "name": "brickWIthItem",
     "eventList": [
-        {
-            "id": "7cf6e976-6653-4407-913c-542409d6dcb0",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "29885434-1dce-462b-9ec7-8f4a25d4aa97",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "a0ada832-e216-47f4-b10d-d3ad20f3f9bc"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -32,7 +23,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": null,
-    "solid": false,
-    "spriteId": "84fff36d-a03b-4a69-8b44-10ef771ab688",
+    "solid": true,
+    "spriteId": "605fe085-1d90-4e83-9758-7990a7051c89",
     "visible": true
 }
