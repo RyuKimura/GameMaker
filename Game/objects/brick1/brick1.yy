@@ -1,8 +1,8 @@
 {
-    "id": "658fdbd7-79af-49ef-bef7-da2900d6f67e",
+    "id": "be4f0ddd-3746-4692-9169-668c0da1a20a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "brick",
+    "name": "brick1",
     "eventList": [
         
     ],
