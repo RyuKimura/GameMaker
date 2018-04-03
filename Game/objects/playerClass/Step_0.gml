@@ -86,7 +86,7 @@ if(state = "normal")
 		
 		// Verical Platform Speed Adjust
 		
-		if(place_meeting(x,y+(vspd+1),obj_vPlatform))
+		if(place_meeting(x,y+1,obj_vPlatform))
 		{	
 			v_collision = true;
 			platform = instance_place(x,y+1,obj_vPlatform);
