@@ -1,50 +1,91 @@
 key_right = keyboard_check(ord("D"));
 key_left = -keyboard_check(ord("A"));
+key_up = -keyboard_check(ord("W"));
+key_down = keyboard_check(ord("S"));
 
 move = key_right + key_left;
+climb = key_up + key_down;
 
 hspd = move * spd;
 
-if(vspd < gravMax)
+if(state == "climb")
 {
-	vspd += grav;
-}
-
-if(place_meeting(x,y+1,wallClass))
-{
-	if(keyboard_check_pressed(ord("W")))
+	x = ladder.x;
+	
+	if(keyboard_check_pressed(vk_space))
 	{
-	vspd = jump_height;
+		
+		state = "normal";
+		
+		vspd = -(jump_height/1.5);
+	}
+	
+	if(place_meeting(x,y,obj_ladder))
+	{
+		y += climb * climb_spd;
+	}
+	else
+	{
+		state = "normal";
 	}
 }
 
 
-if(place_meeting(x,y+vspd,wallClass))
+if(state = "normal")
 {
-while(!place_meeting(x,y+sign(vspd),wallClass))
- {
- y += sign(vspd);
- }
- vspd = 0;
-}
+
+	if(vspd < gravMax)
+	{
+		vspd += grav;
+	}
+
+	if(place_meeting(x,y,obj_ladder))
+	{
+		if(keyboard_check_pressed(ord("W")) || keyboard_check_pressed(ord("S")))
+		{
+			ladder = instance_place(x,y,obj_ladder);
+			state = "climb";
+		}
+	}
 
 
-if(place_meeting(x+hspd,y,wallClass))
-{
-while(!place_meeting(x+sign(hspd),y,wallClass))
- {
- x += sign(hspd);
- }
- hspd = 0;
-}
+	if(place_meeting(x,y+1,wallClass))
+	{
+		if(keyboard_check_pressed(vk_space))
+		{
+		vspd = jump_height;
+		}
+	}
+	
+	
+	if(place_meeting(x,y+vspd,wallClass))
+	{
+	while(!place_meeting(x,y+sign(vspd),wallClass))
+	 {
+	 y += sign(vspd);
+	 }
+	 vspd = 0;
+	}
+	
+	
+	if(place_meeting(x+hspd,y,wallClass))
+	{
+	while(!place_meeting(x+sign(hspd),y,wallClass))
+	 {
+	 x += sign(hspd);
+	 }
+	 hspd = 0;
+	}
 
 
 x += hspd;
 y += vspd;
 
-	if(y > room_height+32)
-	{
-		vspd = 0;
-		y = ystart;
-		x = xstart;
-	}
+}
+
+if(y > room_height+32)
+{
+	vspd = 0;
+	y = ystart;
+	x = xstart;
+}
