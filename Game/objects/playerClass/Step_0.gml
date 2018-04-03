@@ -55,6 +55,20 @@ if(state = "normal")
 		{
 		vspd = jump_height;
 		}
+		
+		if(place_meeting(x,y+1,obj_hPlatform))
+		{
+			platform = instance_place(x,y+1,obj_hPlatform);
+
+			x += platform.dirType;
+		}
+		
+		if(place_meeting(x,y+1,obj_vPlatform))
+		{
+			platform = instance_place(x,y+1,obj_vPlatform);
+			
+			vspd = platform.dirType;
+		}
 	}
 	
 	
