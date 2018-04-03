@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "509855ac-fbc5-44c3-bc62-8a87cd4cc753",
+            "Value": {
+                "id": "3606da12-32c3-4403-ab8b-b2f87953cf92",
+                "resourcePath": "objects\\AIClass\\AIClass.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5cf85687-61ca-4986-9362-17fa56929654",
             "Value": {
                 "id": "2cc13551-32ef-41c3-bd37-3567880809c9",
