@@ -11,9 +11,15 @@ switch (currState) {
         hspeed = moveSpeed;
         break;
 	case "Chase":
-	
+	var dir = point_direction(x,y,playerClass.x,playerClass.y);
+		if(dir < 90 && dir > 270){
+			hspeed = -moveSpeed;
+		}
+		else if(dir > 90 && dir < 270){
+			hspeed = moveSpeed;
+		}		
 		break;
     default:
-        // code here
+        show_message("FUCKED");
         break;
 }
