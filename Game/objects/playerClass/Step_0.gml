@@ -8,6 +8,11 @@ climb = key_up + key_down;
 
 hspd = move * spd;
 
+if(keyboard_check_pressed(ord("R")))
+{
+	room_restart();
+}
+
 if(state == "climb")
 {
 	x = ladder.x;
@@ -67,28 +72,39 @@ if(state = "normal")
 		{
 			platform = instance_place(x,y+1,obj_vPlatform);
 			
-			vspd = platform.dirType;
+			y += platform.dirType;
 		}
 	}
 	
 	
 	if(place_meeting(x,y+vspd,wallClass))
 	{
+	 collision = true;
 	while(!place_meeting(x,y+sign(vspd),wallClass))
 	 {
 	 y += sign(vspd);
 	 }
 	 vspd = 0;
 	}
+		else
+	{
+		collision = false;
+	}
+
 	
 	
 	if(place_meeting(x+hspd,y,wallClass))
 	{
+	 collision = true;
 	while(!place_meeting(x+sign(hspd),y,wallClass))
 	 {
 	 x += sign(hspd);
 	 }
 	 hspd = 0;
+	}
+	else
+	{
+		collision = false;
 	}
 
 
