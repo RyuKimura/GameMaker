@@ -84,7 +84,7 @@ if(state = "normal")
 			x += platform.dirType;
 		}
 		
-		// Verical Platform Speed Adjust
+		// Verical Platform Speed Adjust STUFF
 		
 		if(place_meeting(x,y+1,obj_vPlatform))
 		{	
