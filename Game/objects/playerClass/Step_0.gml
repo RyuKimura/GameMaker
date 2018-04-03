@@ -44,12 +44,16 @@ if(state = "normal")
 {
 
 	// Gravity
-
+	
 	if(vspd < gravMax)
 	{
 		vspd += grav;
 	}
-
+	
+	h_collision = place_meeting(x,y,wallClass);
+	
+	v_collision = place_meeting(x,y,wallClass);
+	
 	// Climbing State Change
 
 	if(place_meeting(x,y,obj_ladder))
@@ -82,11 +86,14 @@ if(state = "normal")
 		
 		// Verical Platform Speed Adjust
 		
-		if(place_meeting(x,y+1,obj_vPlatform))
-		{
+		if(place_meeting(x,y+(vspd+1),obj_vPlatform))
+		{	
+			v_collision = true;
 			platform = instance_place(x,y+1,obj_vPlatform);
 			
 			y += platform.dirType;
+			
+			vspd = 0;
 		}
 	}
 	
@@ -94,7 +101,7 @@ if(state = "normal")
 	
 	if(place_meeting(x,y+vspd,wallClass))
 	{
-	 collision = true;
+	 v_collision = place_meeting(x,y+vspd,wallClass);
 	while(!place_meeting(x,y+sign(vspd),wallClass))
 	 {
 	 y += sign(vspd);
@@ -103,25 +110,20 @@ if(state = "normal")
 	}
 	else
 	{
-		collision = false;
+		v_collision = false;
 	}
 
 	// Horizontal Collision
 	
 	if(place_meeting(x+hspd,y,wallClass))
 	{
-	 collision = true;
+		h_collision = place_meeting(x+hspd,y,wallClass);
 	while(!place_meeting(x+sign(hspd),y,wallClass))
 	 {
 	 x += sign(hspd);
 	 }
 	 hspd = 0;
 	}
-	else
-	{
-		collision = false;
-	}
-
 
 x += hspd;
 y += vspd;

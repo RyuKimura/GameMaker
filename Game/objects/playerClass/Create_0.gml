@@ -14,7 +14,9 @@ x_curr = 0;
 
 platformFound = false
 
-collision = false;
+v_collision = false;
+
+h_collision = false;
 // States
 
 state = "normal";
