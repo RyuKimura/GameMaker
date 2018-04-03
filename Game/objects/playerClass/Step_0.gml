@@ -17,6 +17,8 @@ if(state == "climb")
 {
 	x = ladder.x;
 	
+	// Ladder Jump
+	
 	if(keyboard_check_pressed(vk_space))
 	{
 		
@@ -24,6 +26,8 @@ if(state == "climb")
 		
 		vspd = -(jump_height/1.5);
 	}
+	
+	// Ladder Meeting Check / Movement
 	
 	if(place_meeting(x,y,obj_ladder))
 	{
@@ -39,10 +43,14 @@ if(state == "climb")
 if(state = "normal")
 {
 
+	// Gravity
+
 	if(vspd < gravMax)
 	{
 		vspd += grav;
 	}
+
+	// Climbing State Change
 
 	if(place_meeting(x,y,obj_ladder))
 	{
@@ -56,10 +64,14 @@ if(state = "normal")
 
 	if(place_meeting(x,y+1,wallClass))
 	{
+		// Jump
+		
 		if(keyboard_check_pressed(vk_space))
 		{
 		vspd = jump_height;
 		}
+		
+		// Horizontal Platform Speed Adjust
 		
 		if(place_meeting(x,y+1,obj_hPlatform))
 		{
@@ -67,6 +79,8 @@ if(state = "normal")
 
 			x += platform.dirType;
 		}
+		
+		// Verical Platform Speed Adjust
 		
 		if(place_meeting(x,y+1,obj_vPlatform))
 		{
@@ -76,6 +90,7 @@ if(state = "normal")
 		}
 	}
 	
+	// Vertical Collision
 	
 	if(place_meeting(x,y+vspd,wallClass))
 	{
@@ -86,12 +101,12 @@ if(state = "normal")
 	 }
 	 vspd = 0;
 	}
-		else
+	else
 	{
 		collision = false;
 	}
 
-	
+	// Horizontal Collision
 	
 	if(place_meeting(x+hspd,y,wallClass))
 	{
