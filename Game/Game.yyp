@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "4602674f-00fe-4c4e-a2ca-662d925b57ef",
+            "Value": {
+                "id": "0e86cb81-aff7-4594-97f4-fd796d23506f",
+                "resourcePath": "objects\\Monster\\Monster.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "509855ac-fbc5-44c3-bc62-8a87cd4cc753",
             "Value": {
                 "id": "3606da12-32c3-4403-ab8b-b2f87953cf92",
