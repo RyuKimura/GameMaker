@@ -10,6 +10,10 @@ gravMax = 8;
 
 vspd = 0;
 
+x_curr = 0;
+
+platformFound = false
+
 // States
 
 state = "normal";
