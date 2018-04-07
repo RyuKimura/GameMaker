@@ -8,6 +8,26 @@ climb = key_up + key_down;
 
 hspd = move * spd;
 
+if(move != 0)
+{
+	lastDir = move;
+}
+
+// Grappling Hook
+
+grappleWall = collision_line(x,y,x+(lastDir*grappleDist),y,wallClass, false, false);
+
+
+
+if(grappleWall != noone)
+{
+	grappleDist = (distance_to_object(grappleWall)+16);
+}
+else
+{
+	grappleDist = grappleMax;
+}
+
 if(keyboard_check_pressed(ord("R")))
 {
 	room_restart();

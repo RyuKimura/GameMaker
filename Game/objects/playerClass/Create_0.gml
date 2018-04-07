@@ -17,6 +17,14 @@ platformFound = false
 v_collision = false;
 
 h_collision = false;
+
+grappleDist = 512;
+
+grappleMax = 512;
+
+lastDir = 1;
 // States
 
 state = "normal";
+
+depth = -100
