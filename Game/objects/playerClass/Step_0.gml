@@ -42,6 +42,8 @@ if(state == "grapple")
 		state = "normal";
 	}
 	
+	// Keke
+	
 	/*
 	if(distance_to_object(grappleWall) <= 20)
 	{
