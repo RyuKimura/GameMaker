@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+spd = 0;
+
 dir = 0;
 
 target = noone;
@@ -8,18 +10,11 @@ move = true;
 
 lastDir = 0;
 
-switch(dir)
-{
-	case 1:
-		lastDir = 180;
-		break;
-		
-	case -1:
-		lastDir = 0;
-		break;
-}
+dirRot = 0;
 
 time = 0;
+
+limit = 0;
 
 //timeMax = ;
 

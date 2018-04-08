@@ -28,6 +28,35 @@ if(keyboard_check_pressed(ord("R")))
 
 if(state == "grapple")
 {
+	if(place_meeting(x+(grappleSpd*lastDir),y,wallClass))
+	{
+		if(grappleWall == noone)
+		{
+		grappleWall = instance_nearest(x,y,wallClass);
+		}	
+			
+		grappleHit = false;
+		instance_destroy(hook,true);
+		x += (sprite_width/6)*grappleDir;
+		grappleTime = 0;
+		state = "normal";
+	}
+	
+	/*
+	if(distance_to_object(grappleWall) <= 20)
+	{
+		state = "normal";
+	}
+	*/
+	if(grappleHit != false)
+	{
+	x += grappleSpd*lastDir;
+	}
+}
+
+/*
+if(state == "grapple")
+{
 	if(grappleWall != noone)
 	{
 		if(place_meeting(x+(grappleSpd*lastDir),y,wallClass))
@@ -39,12 +68,6 @@ if(state == "grapple")
 			state = "normal";
 		}
 		
-		/*
-		if(distance_to_object(grappleWall) <= 20)
-		{
-			state = "normal";
-		}
-		*/
 		if(grappleHit != false)
 		{
 		x += grappleSpd*lastDir;
@@ -58,6 +81,8 @@ if(state == "grapple")
 		state = "normal";
 	}
 }
+
+*/
 
 if(state == "climb")
 {
@@ -97,9 +122,9 @@ if(state == "normal")
 
 	// Misc
 	
-	if(grappleTime > 0)
+	if(grappleTime < grappleCooldown)
 	{
-		grappleTime -= 1;
+		grappleTime += 1;
 	}
 
 	// Gravity
@@ -128,18 +153,16 @@ if(state == "normal")
 
 	if(mouse_check_button_pressed(mb_left))
 	{
-		if(grappleWall != noone)
-		{
-			if(grappleTime == 0)
+			if(grappleTime >= grappleCooldown)
 			{
+			last_vspd = vspd;
 			vspd = 0;
 			hook = instance_create_layer(x,y,"Instances",grappleHook_obj);
-			hook.spd = 4;
+			hook.spd = 16;
 			hook.dir = lastDir;
 			hook.target = grappleWall;
 			state = "grapple";
 			}
-		}
 	}
 
 	if(place_meeting(x,y+1,wallClass))

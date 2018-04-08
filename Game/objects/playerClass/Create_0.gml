@@ -10,6 +10,8 @@ gravMax = 8;
 
 vspd = 0;
 
+last_vspd = 0;
+
 x_curr = 0;
 
 platformFound = false
@@ -22,7 +24,7 @@ grappleMax = 432;
 
 grappleDist = grappleMax;
 
-grappleSpd = 10;
+grappleSpd = 16;
 
 grappleDir = -1;
 
