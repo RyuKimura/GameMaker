@@ -18,9 +18,17 @@ v_collision = false;
 
 h_collision = false;
 
-grappleDist = 512;
+grappleMax = 432;
 
-grappleMax = 512;
+grappleDist = grappleMax;
+
+grappleSpd = 10;
+
+grappleDir = -1;
+
+grappleCooldown = 120;
+
+grappleTime = 0;
 
 lastDir = 1;
 // States

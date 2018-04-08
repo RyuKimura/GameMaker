@@ -8,11 +8,6 @@ climb = key_up + key_down;
 
 hspd = move * spd;
 
-if(move != 0)
-{
-	lastDir = move;
-}
-
 // Grappling Hook
 
 grappleWall = collision_line(x,y,x+(lastDir*grappleDist),y,wallClass, false, false);
@@ -21,7 +16,7 @@ grappleWall = collision_line(x,y,x+(lastDir*grappleDist),y,wallClass, false, fal
 
 if(grappleWall != noone)
 {
-	grappleDist = (distance_to_object(grappleWall)+16);
+	grappleDist = (distance_to_object(grappleWall)+(grappleWall.sprite_width/2));
 }
 else
 {
@@ -31,6 +26,33 @@ else
 if(keyboard_check_pressed(ord("R")))
 {
 	room_restart();
+}
+
+if(state == "grapple")
+{
+	if(grappleWall != noone)
+	{
+		if(place_meeting(x+(grappleSpd*lastDir),y,wallClass))
+		{
+			x += (grappleWall.sprite_width/2)*grappleDir;
+			grappleTime = grappleCooldown;
+			state = "normal";
+		}
+		
+		/*
+		if(distance_to_object(grappleWall) <= 20)
+		{
+			state = "normal";
+		}
+		*/
+		
+	x += grappleSpd*lastDir;
+	}
+	else
+	{
+		grappleTime = grappleCooldown;
+		state = "normal";
+	}
 }
 
 if(state == "climb")
@@ -63,6 +85,19 @@ if(state == "climb")
 if(state = "normal")
 {
 
+	if(move != 0)
+	{
+	lastDir = move;
+	grappleDir = move*-1;
+	}
+
+	// Misc
+	
+	if(grappleTime > 0)
+	{
+		grappleTime -= 1;
+	}
+
 	// Gravity
 	
 	if(vspd < gravMax)
@@ -85,6 +120,19 @@ if(state = "normal")
 		}
 	}
 
+	// Grapple State Change
+
+	if(mouse_check_button_pressed(mb_left))
+	{
+		if(grappleWall != noone)
+		{
+			if(grappleTime == 0)
+			{
+			vspd = 0;
+			state = "grapple";
+			}
+		}
+	}
 
 	if(place_meeting(x,y+1,wallClass))
 	{
