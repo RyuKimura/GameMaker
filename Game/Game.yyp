@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "1037d9bc-9798-4789-97af-3b1cd5035197",
+            "Value": {
+                "id": "57b06f6b-26d4-4430-83b5-4c0b5787581f",
+                "resourcePath": "sprites\\grappleHook_sprite\\grappleHook_sprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "10f64297-43b6-4ba5-9892-89d742a0f755",
             "Value": {
                 "id": "1d005ccb-84d7-4519-a717-f11538bc25f8",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "5eac91e9-ad74-4cde-a5d5-5d36d2a8b54b",
+            "Value": {
+                "id": "5b056b18-7cdb-48c5-9dd8-3c47e7ddc8c2",
+                "resourcePath": "sprites\\grappleHookRope_sprite\\grappleHookRope_sprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5f8f6195-7e22-4740-bb23-41017d9e29f1",
             "Value": {
                 "id": "ae7b2278-ecd5-463d-9754-491c93fc0915",
@@ -228,6 +244,14 @@
                 "id": "3252b0ae-8578-4ade-af5f-6d05d3ab534e",
                 "resourcePath": "sprites\\brick_sprite\\brick_sprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6073fdd1-44c0-4b25-bcce-eeb553e18b2a",
+            "Value": {
+                "id": "850ed2f2-13d9-4d18-b16e-4eaeded23f06",
+                "resourcePath": "objects\\grappleHook_obj\\grappleHook_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

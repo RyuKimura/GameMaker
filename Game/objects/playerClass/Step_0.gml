@@ -12,8 +12,6 @@ hspd = move * spd;
 
 grappleWall = collision_line(x,y,x+(lastDir*grappleDist),y,wallClass, false, false);
 
-
-
 if(grappleWall != noone)
 {
 	grappleDist = (distance_to_object(grappleWall)+(grappleWall.sprite_width/2));
@@ -34,6 +32,8 @@ if(state == "grapple")
 	{
 		if(place_meeting(x+(grappleSpd*lastDir),y,wallClass))
 		{
+			grappleHit = false;
+			instance_destroy(hook,true);
 			x += (grappleWall.sprite_width/2)*grappleDir;
 			grappleTime = grappleCooldown;
 			state = "normal";
@@ -45,11 +45,15 @@ if(state == "grapple")
 			state = "normal";
 		}
 		*/
-		
-	x += grappleSpd*lastDir;
+		if(grappleHit != false)
+		{
+		x += grappleSpd*lastDir;
+		}
 	}
 	else
 	{
+		grappleHit = false;
+		instance_destroy(hook,true);
 		grappleTime = grappleCooldown;
 		state = "normal";
 	}
@@ -82,7 +86,7 @@ if(state == "climb")
 }
 
 
-if(state = "normal")
+if(state == "normal")
 {
 
 	if(move != 0)
@@ -129,6 +133,10 @@ if(state = "normal")
 			if(grappleTime == 0)
 			{
 			vspd = 0;
+			hook = instance_create_layer(x,y,"Instances",grappleHook_obj);
+			hook.spd = 4;
+			hook.dir = lastDir;
+			hook.target = grappleWall;
 			state = "grapple";
 			}
 		}

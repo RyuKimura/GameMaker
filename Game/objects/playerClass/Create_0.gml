@@ -30,6 +30,8 @@ grappleCooldown = 120;
 
 grappleTime = 0;
 
+grappleHit = false;
+
 lastDir = 1;
 // States
 
